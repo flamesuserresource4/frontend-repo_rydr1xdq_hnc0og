@@ -4,6 +4,8 @@ import Features from './components/Features'
 import Process from './components/Process'
 import Pricing from './components/Pricing'
 import CTA from './components/CTA'
+import Why from './components/Why'
+import OldVsNew from './components/OldVsNew'
 
 function App() {
   return (
@@ -22,7 +24,9 @@ function App() {
       <Navbar />
       <main className="relative">
         <Hero />
+        <Why />
         <Features />
+        <OldVsNew />
         <Process />
         <Pricing />
         <CTA />
