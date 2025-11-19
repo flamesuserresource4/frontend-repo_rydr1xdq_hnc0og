@@ -26,6 +26,12 @@ const tiers = [
 function Pricing() {
   return (
     <section id="pricing" className="relative py-20">
+      {/* Hero header colors backdrop for this section */}
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(70% 60% at 50% -5%, rgba(124,58,237,0.16) 0%, rgba(37,99,235,0.12) 42%, rgba(255,255,255,0) 70%)' }} />
+        <div className="absolute bottom-[-10%] left-[-10%] h-[520px] w-[520px] rounded-full bg-purple-600/15 blur-3xl" />
+      </div>
+
       <div className="mx-auto max-w-7xl px-6">
         <div className="max-w-2xl">
           <motion.h2
@@ -56,7 +62,7 @@ function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="rounded-2xl border border-white/10 bg-white/5 p-6"
+              className="rounded-2xl border border-white/10 bg-gradient-to-br from-purple-500/10 via-blue-500/10 to-transparent p-6"
             >
               <div className="text-white/60">{t.name}</div>
               <div className="mt-2 text-2xl font-semibold text-white">{t.price}</div>

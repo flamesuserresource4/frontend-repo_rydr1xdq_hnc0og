@@ -3,8 +3,14 @@ import { motion } from 'framer-motion'
 function CTA() {
   return (
     <section id="get-started" className="relative py-20">
+      {/* Hero header colors backdrop for this section */}
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(70% 60% at 50% -10%, rgba(124,58,237,0.16) 0%, rgba(37,99,235,0.12) 40%, rgba(255,255,255,0) 70%)' }} />
+        <div className="absolute -bottom-24 right-[-10%] h-[520px] w-[520px] rounded-full bg-blue-500/15 blur-3xl" />
+      </div>
+
       <div className="mx-auto max-w-7xl px-6">
-        <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-10">
+        <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-purple-500/10 via-blue-500/10 to-transparent p-10">
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_60%_at_70%_20%,rgba(124,58,237,0.25),transparent)]" />
           <motion.h3
             initial={{ opacity: 0, y: 20 }}

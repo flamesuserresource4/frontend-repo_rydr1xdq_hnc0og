@@ -21,6 +21,12 @@ const featureItems = [
 function Features() {
   return (
     <section id="features" className="relative py-20">
+      {/* Hero header colors backdrop for this section */}
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(70% 60% at 50% -5%, rgba(124,58,237,0.18) 0%, rgba(37,99,235,0.12) 40%, rgba(255,255,255,0) 70%)' }} />
+        <div className="absolute -bottom-24 -right-24 h-[520px] w-[520px] rounded-full bg-blue-500/15 blur-3xl" />
+      </div>
+
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="max-w-2xl">
           <motion.h2
@@ -51,7 +57,7 @@ function Features() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="group rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/7.5 transition"
+              className="group rounded-2xl border border-white/10 bg-gradient-to-br from-purple-500/10 via-blue-500/10 to-transparent p-6 hover:from-purple-500/15 hover:via-blue-500/15 transition"
             >
               <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 ring-1 ring-inset ring-white/15 text-white">
                 <Icon size={20} />
