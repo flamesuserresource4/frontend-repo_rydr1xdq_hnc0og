@@ -56,24 +56,20 @@ function Hero() {
             </motion.div>
           </div>
 
-          {/* Stats */}
+          {/* Placeholder space where the stat cards used to be (keeps layout spacing, hides visuals) */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.25, duration: 0.6 }}
             viewport={{ once: true }}
-            className="mt-10 grid w-full max-w-4xl grid-cols-2 gap-6 text-white/70 sm:grid-cols-4"
+            className="mt-10 grid w-full max-w-4xl grid-cols-2 gap-6 sm:grid-cols-4"
+            aria-hidden="true"
           >
-            {[
-              ['60%+', 'Less manual work'],
-              ['<14 days', 'From idea to automation'],
-              ['24/7', 'Always-on agents'],
-              ['ROI-first', 'Automations that pay back'],
-            ].map(([stat, label]) => (
-              <div key={label} className="rounded-xl border border-white/10 bg-white/5 p-4 text-center">
-                <div className="text-xl font-semibold text-white">{stat}</div>
-                <div className="text-sm text-white/70">{label}</div>
-              </div>
+            {[0, 1, 2, 3].map((i) => (
+              <div
+                key={i}
+                className="rounded-xl p-4 text-center invisible h-24"
+              />
             ))}
           </motion.div>
 
