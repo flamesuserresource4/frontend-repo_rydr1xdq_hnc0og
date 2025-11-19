@@ -8,11 +8,15 @@ import CTA from './components/CTA'
 function App() {
   return (
     <div className="min-h-screen bg-slate-950 text-white relative">
-      {/* Global soft gradient for the entire page (one continuous background) */}
+      {/* Unified hero-color background spanning the entire page */}
       <div className="pointer-events-none fixed inset-0 -z-10">
-        <div className="absolute inset-0 bg-[radial-gradient(60%_60%_at_50%_0%,rgba(37,99,235,0.10),transparent)]" />
-        <div className="absolute -top-20 -left-20 h-[520px] w-[520px] rounded-full bg-purple-600/10 blur-3xl" />
-        <div className="absolute bottom-[-10%] right-[-10%] h-[560px] w-[560px] rounded-full bg-blue-500/10 blur-3xl" />
+        {/* Radial glow echoing the hero header, stretched site-wide */}
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(70% 55% at 50% 0%, rgba(124,58,237,0.28) 0%, rgba(37,99,235,0.16) 38%, rgba(255,255,255,0) 70%)' }} />
+        {/* Subtle conic hue to add premium depth */}
+        <div className="absolute inset-0 opacity-30 mix-blend-screen bg-[conic-gradient(from_180deg_at_50%_50%,#7c3aed22_0deg,#2563eb18_120deg,#f59e0b14_240deg,#7c3aed22_360deg)]" />
+        {/* Large ambient glows to keep edges alive without breaking continuity */}
+        <div className="absolute -top-24 -left-24 h-[620px] w-[620px] rounded-full bg-purple-600/15 blur-3xl" />
+        <div className="absolute bottom-[-15%] right-[-10%] h-[680px] w-[680px] rounded-full bg-blue-500/15 blur-3xl" />
       </div>
 
       <Navbar />
