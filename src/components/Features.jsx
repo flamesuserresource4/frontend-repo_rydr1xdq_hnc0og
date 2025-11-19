@@ -21,7 +21,6 @@ const featureItems = [
 function Features() {
   return (
     <section id="features" className="relative py-20">
-      <div className="absolute inset-0 bg-[radial-gradient(80%_60%_at_50%_0%,rgba(124,58,237,0.12),transparent)]" />
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="max-w-2xl">
           <motion.h2

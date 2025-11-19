@@ -7,8 +7,14 @@ import CTA from './components/CTA'
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
-      <div className="absolute inset-0 bg-[radial-gradient(60%_60%_at_50%_0%,rgba(37,99,235,0.12),transparent)]" />
+    <div className="min-h-screen bg-slate-950 text-white relative">
+      {/* Global soft gradient for the entire page (one continuous background) */}
+      <div className="pointer-events-none fixed inset-0 -z-10">
+        <div className="absolute inset-0 bg-[radial-gradient(60%_60%_at_50%_0%,rgba(37,99,235,0.10),transparent)]" />
+        <div className="absolute -top-20 -left-20 h-[520px] w-[520px] rounded-full bg-purple-600/10 blur-3xl" />
+        <div className="absolute bottom-[-10%] right-[-10%] h-[560px] w-[560px] rounded-full bg-blue-500/10 blur-3xl" />
+      </div>
+
       <Navbar />
       <main className="relative">
         <Hero />
@@ -17,7 +23,7 @@ function App() {
         <Pricing />
         <CTA />
       </main>
-      <footer className="relative border-t border-white/10 py-8">
+      <footer className="relative py-8">
         <div className="mx-auto max-w-7xl px-6 flex items-center justify-between text-sm text-white/50">
           <div>© {new Date().getFullYear()} Flames Automation</div>
           <div className="flex gap-4">
