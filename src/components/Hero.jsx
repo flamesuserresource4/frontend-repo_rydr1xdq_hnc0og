@@ -1,4 +1,3 @@
-import Spline from '@splinetool/react-spline'
 import { motion } from 'framer-motion'
 
 function GradientGlow() {
@@ -78,13 +77,7 @@ function Hero() {
             ))}
           </motion.div>
 
-          {/* Spline scene card */}
-          <div className="relative mt-12 h-[460px] w-full max-w-5xl sm:h-[520px] lg:h-[560px]">
-            <div className="absolute inset-0 rounded-3xl border border-white/10 bg-white/5 backdrop-blur overflow-hidden shadow-[0_0_60px_-15px_rgba(124,58,237,0.35)]">
-              <Spline scene="https://prod.spline.design/4cHQr84zOGAHOehh/scene.splinecode" style={{ width: '100%', height: '100%' }} />
-            </div>
-            <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-inset ring-white/15"></div>
-          </div>
+          {/* Removed Spline card for a cleaner, content-first hero */}
         </div>
       </div>
     </section>
